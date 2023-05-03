@@ -16,7 +16,9 @@ function myFunction() {
 //myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+//Well, theres many different levels of closure in coding, and I think it would best be defined, for this question, as level. myFunction is level 1, or global scope, the internal variable
+// and nested function are on level 2(inside of myFunction). The principle of closure is that you can reach out, not in. So, console.log(internal) can work because it is reaching outside of its function
+// at level 3 to grab at level 2, which is outside. 
 
 
 
@@ -30,11 +32,14 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(numSummations) {
+  let num = 0;
+  for (let i = 1; i <= numSummations; i++) {
+    num += i;
   }
- 
+  return num
+  }
+ //console.log(summation(9));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -60,8 +65,10 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(arr){
+    arr.forEach(displayNames => {
+      console.log(displayNames);
+    });
   }
   
 
