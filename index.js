@@ -123,7 +123,11 @@ const zooAnimals = [
   */
 
   function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+    
+    let totalPop = zooAnimals.reduce(function(accumulator, item) {
+      return accumulator + item.population;
+    }, 0);
+    return totalPop
   }
   
   
