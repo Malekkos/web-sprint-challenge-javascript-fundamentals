@@ -103,7 +103,13 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+    let lt5 = [];
+    zooAnimals.filter(function(element) {
+      if (element.population < 5) {
+        lt5.push(element);
+      }
+    })
+    return lt5;
   }
   
 
